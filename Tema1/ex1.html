@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Пример JavaScript Message - alert, prompt, confirm</title>
+</head>
+<body>
+    <h1>Пример JavaScript - вывод данных</h1>
+    <hr>
+    <script>
+        document.write('<h2 style="color: red;">Hello, world!</h2>');
+        alert("hellow orda");
+        
+        var answer;
+        answer = prompt('Ваше имя', 'пластилин');
+        if (answer == null || answer == '') {
+            document.write('Вы ничего не ввели');
+        } else if (typeof Number(answer) == number) {
+            document.write('Вы ввели номер. Боюсь мы пользуемся именами');
+        } else {
+            document.write("Ваше имя: " + answer);
+        }
+        document.write('<br>');
+
+        var answerUser;
+        answerUser = confirm('Перейти на сайт?');
+        if(answerUser){
+            document.write('Вот ваш сайт: <a href="vk.com"> VK </a>');
+        } else {
+            document.write('Вы решили не переходить по ссылке');
+        }
+
+    </script>
+</body>
+</html>
