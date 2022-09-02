@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Задание1</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        document.write('<h2>Пример вывода без цикла</h2>');
+        document.write('Число: <b>0</b>');
+        document.write('<br />');
+        document.write('Число: <b>10</b>');
+        document.write('<br />');
+        document.write('Число: <b>20</b>');
+        document.write('<br />');
+        document.write('Число: <b>40</b>');
+        document.write('<br />');
+        document.write('Число: <b>50</b>');
+        document.write('<br />');
+        document.write('Число: <b>60</b>');
+        document.write('<br />');
+        document.write('Число: <b>80</b>');
+        document.write('<br />');
+        document.write('Число: <b>100</b>');
+        document.write('<br />');
+        
+        document.write('<hr />');
+        document.write('<h2>Пример вывода, используя цикл FOR </h2>');
+        
+        //-------------------------- Решение --------------------------
+        for (let index = 0; index <= 100; index+=10) {
+            if (index == 30 || index == 70 || index == 90) {
+                continue;
+            }
+            document.write('Число: <b>' + index + '</b>');
+            document.write('<br />');
+        }
+        //-------------------------- Решение --------------------------
+        
+        document.write('<footer>')
+        document.write('<p>JPTV20</p>')
+        document.write('<p>2022</p>')
+        document.write('<p>Крейвальд Дмитрий</p>')
+        document.write('<p>Баданова Юлия</p>')
+        document.write('</footer>')
+    </script>
+
+</body>
+
+</html>

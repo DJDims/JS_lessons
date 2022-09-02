@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <h2>Цикл for</h2>
+    <script>
+        let count, num1, num2, summa, userAnswer;
+
+        count = prompt('Сколько примеров вы хотите выполнить?')
+
+        for (let index = 0; index < count; index++) {
+            num1 = parseInt(Math.random()*11);
+            num2 = parseInt(Math.random()*11);
+            summa = num1 + num2;
+            userAnswer = prompt('Решите пример\n' + num1 + '+' + num2 + '=');
+    
+            if (userAnswer == summa) {
+                document.write('<p style="color:#00ff00">' + index +') Правильно!</p><p>' + num1 + '+' + num2 + '=' + summa + '</p>');
+            } else {
+                document.write('<p style="color:#ff0000">' + index +')Неправильно!</p><p>' + num1 + '+' + num2 + '=' + summa + '</p>');
+            }
+        }
+        
+        let counter = 1;
+        while (counter != count) {
+            num1 = parseInt(Math.random()*11);
+            num2 = parseInt(Math.random()*11);
+            summa = num1 + num2;
+            userAnswer = prompt('Решите пример\n' + num1 + '+' + num2 + '=');
+            
+            if (userAnswer == summa) {
+                document.write('<p style="color:#00ff00">' + counter +')Правильно!</p><p>' + num1 + '+' + num2 + '=' + summa + '</p>');
+            } else {
+                document.write('<p style="color:#ff0000">' + counter +')Неправильно!</p><p>' + num1 + '+' + num2 + '=' + summa + '</p>');
+            }
+            
+            counter++;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        let num1, num2, product, userAnswer; 
+        let rights = 0;
+        let mistakes = 0;
+
+        for (let index = 1; index < 6; index++) {
+            num1 = parseInt(Math.random()*11);
+            num2 = parseInt(Math.random()*11);
+            product = num1 * num2;
+            userAnswer = prompt('Решите пример\n' + num1 + '*' + num2 + '=');
+    
+            if (userAnswer == product) {
+                document.write('<p style="color:#00ff00">' + index +') Правильно!</p><p>' + num1 + '*' + num2 + '=' + product + '</p>');
+                rights++;
+            } else {
+                document.write('<p style="color:#ff0000">' + index +') Неправильно!</p><p>' + num1 + '*' + num2 + '=' + product + '</p>');
+                mistakes++;
+            }
+        }
+        document.write('<p>Ваши результаты:</p>');
+        document.write('<p>' + rights + ' правильных ответов</p>');
+        document.write('<p>' + mistakes + ' неправильных ответов</p>');
+    </script>
+</body>
+</html>

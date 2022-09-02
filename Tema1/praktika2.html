@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        let num1, num2, summa, userAnswer;
+
+        num1 = parseInt(Math.random()*11);
+        num2 = parseInt(Math.random()*11);
+        summa = num1 + num2;
+        userAnswer = prompt('Решите пример\n' + num1 + '+' + num2 + '=');
+
+        if (userAnswer == summa) {
+            document.write('<p style="color:#00ff00">Правильно!</p>');
+        } else {
+            document.write('<p style="color:#ff0000">Неправильно!</p><p> Ответ: ' + summa + '</p>');
+        }
+    </script>
+</body>
+</html>
