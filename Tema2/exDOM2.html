@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+        #content{ width: 30%; height: 50px; border: 1px solid black; margin-bottom: 5px;}
+        #intro{ width: 30%; height: 150px; border: 1px solid black;}
+        .invisible{display: none;}
+    </style>
+</head>
+<body>
+    <div id="content">
+        Content by DIV
+    </div>
+    <div id="intro">
+        Hello, world!
+    </div>
+    <p>Counter: <span id="counter">0</span></p>
+    <hr>
+    <button id="btnColor" onclick="myColor()">Color</button>
+    <button id="btnText" onclick="myText()">Text</button>
+    <button id="btnCounter" onclick="myCounter()">Counter</button>
+    <button id="btnRefresh" onclick="refreshPage()" class="invisible">Page refresh</button>
+    <div class="clear"></div>
+
+    <footer>
+        <hr>IVKHK 2022
+    </footer>
+
+    <script>
+        function myColor() {
+            let element = document.getElementById('content');
+            
+            if (element.style.backgroundColor == "red") {
+                element.style.backgroundColor = "green";
+            } else {
+                element.style.backgroundColor = "red";
+            }
+        }
+        function myText() {
+            let element = document.getElementById('');
+            let text = document.getElementById('intro').innerHTML;
+            text += 'Hello, world! ';
+            document.getElementById('intro').innerHTML = text;
+        }
+        function myCounter() {
+            let k = 0;
+            k = document.getElementById('counter').innerHTML;
+            k++;
+            document.getElementById('counter').innerHTML = k;
+            if (k >= 5) {
+                document.getElementById('btnCounter').setAttribute('disabled', false);
+                document.getElementById('btnRefresh').style.display = 'block';
+            }
+        }
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
