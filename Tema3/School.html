@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <div>
+        <h2>Список студентов</h2>
+    </div>
+    <div id="content">
+
+    </div>
+    <script>
+        let students = [
+            {
+                name: 'Dmitrii Kreivald',
+                group: 'JPTV20',
+                age: '18',
+                adress: 'Narva',
+            },
+            {
+                name: 'Arseni Chistyakov',
+                group: 'JPTV20',
+                age: '18',
+                adress: 'Jõhvi',
+                photo: '4.jpg'
+            },
+            {
+                name: 'Julia Badanove',
+                group: 'JPTV20',
+                age: '18',
+                adress: 'Kohtla-Jarve',
+                photo: '1.jpg'
+            },
+            {
+                name: 'Aleksei Kozlov',
+                group: 'JPTV20',
+                age: '21',
+                adress: 'Kiviõli',
+                photo: '3.jpg'
+            },
+        ];
+
+        function printStudents(student) {
+            let container = document.createElement('div');
+            container.style.float = 'left';
+            container.style.width = '300px';
+
+            let text = '';
+            text += '<h3>' + student.name + '</h3>'
+            if ('photo' in student) {
+                text += '<img src="images/' + student.photo + '">';
+            }
+            text += '<p>Группа: ' + student.group + '</p>';
+            text += '<p>Возраст: ' + student.age + '</p>';
+            text += '<p>Адрес: ' + student.adress + '</p>';
+
+            container.innerHTML = text;
+            document.getElementById('content').appendChild(container);
+        }
+
+        for (let i = 0; i < students.length; i++) {
+            printStudents(students[i]);
+        }
+    </script>
+</body>
+</html>

@@ -8,19 +8,41 @@
     <h1>JavaScript Array</h1>
     <h2>Countries list</h2>
     <div id="content">
-
     </div>
-    <script>
-        var countries = ['Eesti', 'Russia', 'Norway', ' Germany'];
-        printCountries(countries);
+    <div id="myContent">
+        <h2 id="mH1"></h2>
+    </div>
+    <div id="content3">
+        <h2 id="mH2"></h2>
+        <ul id="list"></ul>
+    </div>
 
-        function printCountries() {
+    <script>
+        let country1 = ['Eesti', 'Russia', 'Norway', ' Germany'];
+        let country2 = ['Eesti', 'Russia', 'Norway', ' Germany', 'France', 'China', 'Italy'];
+        let city = ['Tallin', 'Jõhvi', 'Narva', 'Moscow', 'St. Peterburg', 'Oslo', 'Berlin', 'Roma', 'Paris'];
+        
+        function printCountries(countries, divId) {
             for (let i = 0; i < countries.length; i++) {
                 let p = document.createElement('p');
                 p.innerHTML = countries[i];
-                document.getElementById('content').appendChild(p);
+                document.getElementById(divId).appendChild(p);
             }
         }
+
+        function printListCity(dataList) {
+            for (let i = 0; i < dataList.length; i++) {
+                let mLi = document.createElement('li');
+                mLi.innerHTML = dataList[i];
+                document.getElementById('list').appendChild(mLi);
+            }
+        }
+        
+        printCountries(country1, 'content');
+        document.getElementById('mH1').innerHTML = "Array - List countries"
+        printCountries(country2, 'myContent');
+        document.getElementById('mH2').innerHTML = "Array - List cities"
+        printListCity(city);
     </script>
 </body>
 </html>
