@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>JavaScript Array</h1>
+    <h2>Countries list</h2>
+    <div id="content">
+
+    </div>
+    <script>
+        var countries = ['Eesti', 'Russia', 'Norway', ' Germany'];
+        printCountries(countries);
+
+        function printCountries() {
+            for (let i = 0; i < countries.length; i++) {
+                let p = document.createElement('p');
+                p.innerHTML = countries[i];
+                document.getElementById('content').appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
