@@ -27,7 +27,7 @@
                 photo: '4.jpg'
             },
             {
-                name: 'Julia Badanove',
+                name: 'Julia Badanova',
                 group: 'JPTV20',
                 age: '18',
                 adress: 'Kohtla-Jarve',
@@ -51,6 +51,8 @@
             text += '<h3>' + student.name + '</h3>'
             if ('photo' in student) {
                 text += '<img src="images/' + student.photo + '">';
+            } else {
+                text += '<div style="height: 150px"></div>';
             }
             text += '<p>Группа: ' + student.group + '</p>';
             text += '<p>Возраст: ' + student.age + '</p>';
