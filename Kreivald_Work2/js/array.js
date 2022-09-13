@@ -1,6 +1,6 @@
-let categories = ['Shooter', 'Platformer', 'Horror', 'Puzzle', 'Sandbox'];
+var categories = ['Shooter', 'Platformer', 'Horror', 'Puzzle', 'Sandbox'];
 
-let games = [
+var games = [
     {
         category: 'Shooter',
         title: 'Bioshock',
@@ -54,5 +54,50 @@ let games = [
         publisher: 'Frictional Games',
         description: 'Главный герой - Саймон Джаретт, обычный парень из Торронто, попадает в аварию, в которой погибает его девушка, а сам Саймон получает серьезные повреждения головного мозга, из-за которых медленно умирает. Внезапно с ним связывается ученый Дэвид Мунши, который предлагает пройти сканирование мозга, по новой технологии, которое может помочь понять, как вылечить героя. Саймон соглашается. В назначенный день он приходит в лабораторию, его подключают к аппарату сканирования. Сканирование запускается. Три... Два... Один... Саймон просыпается в темной и незнакомой комнате, вокруг ни кого. Выбравщись из комнаты, он понимает что находится совсем не в Торронто, а на подводной исследовательской базе PATHOS-II, в корпусе Эписон. Найдя пару записок, Саймон узнает, что с момента его сканирования прошло более ста лет, Сам саймон умер через месяц после сканирования, а мир полностью уничтожен падением метеорита. Из выживщих на всей планете осталось лишь 30 сотрудников станции PATHOS-II, однако в следствии некой аварии сотрудники станции так же мертвы. Герой находит выживщую ученую по имени Кэтрин. Вместе с ней ему и предстоит разобраться что тут происходит.',
         poster: 'Images/SOMA_poster.jpg'
+    },
+    {
+        category: '',
+        title: '',
+        publishYear: '',
+        developer: '',
+        publisher: '',
+        description: '',
+        poster: 'Images/.jpg'
+    },
+    {
+        category: '',
+        title: '',
+        publishYear: '',
+        developer: '',
+        publisher: '',
+        description: '',
+        poster: 'Images/.jpg'
+    },
+    {
+        category: '',
+        title: '',
+        publishYear: '',
+        developer: '',
+        publisher: '',
+        description: '',
+        poster: 'Images/.jpg'
+    },
+    {
+        category: '',
+        title: '',
+        publishYear: '',
+        developer: '',
+        publisher: '',
+        description: '',
+        poster: 'Images/.jpg'
+    },
+    {
+        category: '',
+        title: '',
+        publishYear: '',
+        developer: '',
+        publisher: '',
+        description: '',
+        poster: 'Images/.jpg'
     }
 ];
