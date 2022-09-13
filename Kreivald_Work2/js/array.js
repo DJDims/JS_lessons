@@ -100,4 +100,4 @@ var games = [
         description: '',
         poster: 'Images/.jpg'
     }
-];
+ ];
