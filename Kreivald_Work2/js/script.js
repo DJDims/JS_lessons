@@ -59,6 +59,9 @@ function createGameCard(game) {
     cardMoreLink.id = game.id;
     cardMoreLink.onclick = function(e) {getGameInfo(e.target.id)};
     cardMoreLink.href = "#";
+    cardMoreLink.style.color = "#FFFFFF";
+    cardMoreLink.onmouseover = function(){cardMoreLink.style.color = "#d65200"}
+    cardMoreLink.onmouseout = function(){cardMoreLink.style.color = "#FFFFFF"}
 
     card.appendChild(cardPosterDiv);
     card.appendChild(cardHeader);
@@ -76,14 +79,16 @@ function getGameInfo(gameId) {
     let cardHeader = document.createElement('h2');
     let cardBody = document.createElement('p');
     let cardPoster = document.createElement('img');
+    let cardPosterLink = document.createElement('a');
 
     card.style.boxShadow = '10px 10px 10px 5px #000000';
-    card.style.width = 'auto';
+    card.style.width = '80%';
     card.style.display = 'flex';
     card.style.flexDirection = 'row';
     card.style.flexWrap = 'wrap';
     card.style.padding = '10px';
     card.style.marginBottom = '20px';
+    card.style.margin = '20px auto';
     card.style.color = 'white';
     card.style.fontFamily = 'Franklin Gothic Medium';
 
@@ -98,15 +103,23 @@ function getGameInfo(gameId) {
     cardText += 'Издатель - ' + game.publisher + '<br>';
     cardText += 'Описание:\n' + game.description;
     cardBody.innerHTML = cardText;
-    cardBody.style.width = '75%';
+    cardBody.style.width = '70%';
+    cardBody.style.textAlign = 'justify';
+
+    cardPosterLink.href = game.poster;
+    cardPosterLink.style.width = "28%";
+    cardPosterLink.style.marginRight = "20px";
+    cardPosterLink.setAttribute('data-lightbox', 'image');
+
 
     cardPoster.src = game.poster;
     cardPoster.style.float = "left";
-    cardPoster.style.width = "20%";
+    cardPoster.style.width = "100%";
     cardPoster.style.marginRight = "20px";
 
+    cardPosterLink.appendChild(cardPoster);
     card.appendChild(cardHeader);
-    card.appendChild(cardPoster);
+    card.appendChild(cardPosterLink);
     card.appendChild(cardBody);
 
     document.getElementById('content').appendChild(card);
