@@ -2,6 +2,7 @@ var categories = ['Shooter', 'Platformer', 'Horror', 'Puzzle', 'Sandbox'];
 
 var games = [
     {
+        id: '0',
         category: 'Shooter',
         title: 'Bioshock',
         publishYear: '2007',
@@ -11,6 +12,7 @@ var games = [
         poster: 'Images/Bioshock_poster.jpg'
     },
     {
+        id: '1',
         category: 'Shooter',
         title: 'Hotline miami',
         publishYear: '2012',
@@ -20,6 +22,7 @@ var games = [
         poster: 'Images/HM_poster.jpg'
     },
     {
+        id: '2',
         category: 'Shooter',
         title: 'Hotline miami 2: Wrong number',
         publishYear: '2015',
@@ -29,6 +32,7 @@ var games = [
         poster: 'Images/HM2_poster.jpg'
     },
     {
+        id: '3',
         category: 'Platformer',
         title: 'Katana zero',
         publishYear: '2019',
@@ -38,6 +42,7 @@ var games = [
         poster: 'Images/KZ_poster.jpg'
     },
     {
+        id: '4',
         category: 'Puzzle',
         title: 'Portal 2',
         publishYear: '2011',
@@ -47,6 +52,7 @@ var games = [
         poster: 'Images/Portal2_poster.jpg'
     },
     {
+        id: '5',
         category: 'Horror',
         title: 'SOMA',
         publishYear: '2015',
@@ -56,6 +62,47 @@ var games = [
         poster: 'Images/SOMA_poster.jpg'
     },
     {
+        id: '6',
+        category: 'Platformer',
+        title: 'Broforce',
+        publishYear: '2014',
+        developer: 'Free Lives',
+        publisher: 'Devolver Digital',
+        description: 'Вы играете за команду Broforce, состоящую из героев боевиков 80-00 годов. Наши герои сражаются против главных сил зла: террористов, чужих-инопланетян, а так же демонов ада. В конце своего путишествия им предстоит сразиться с самим повелителем ада - с Сатаной, в его истинном обличии.',
+        poster: 'Images/.jpg'
+    },
+    {
+        id: '7',
+        category: 'Horror',
+        title: 'Amnesia: The Dark Descent',
+        publishYear: '2010',
+        developer: 'Frictional Games',
+        publisher: 'Frictional Games',
+        description: 'Герой просыпается в старинном замке. Он не помнит ничего кроме своего имени. "Даниель. Меня зовут Даниель" повторяет себе герой. Даниель находит записку от самого себя, до того как он потерял память. Прошлый Даниель просит будущего себя спуститься в недры замка, и убить Александра Брененбургского. Кто такой Александр, зачем нам его убивать, а главное почему Даниель потерял память? В поисках ответов мы и отправляемся в глубины старинного замка.',
+        poster: 'Images/.jpg'
+    },
+    {
+        id: '8',
+        category: 'Horror',
+        title: 'Outlast',
+        publishYear: '2013',
+        developer: 'Red Barrels',
+        publisher: 'Red Barrels',
+        description: 'Главный герой - Майлз Апшер, репортер, который не боится идти на любые меры, чтобы получить сенсационный материал и донести правду до людей. Однажды ему приходит анонимное письмо, в котором говорится, что в психиатрической лечебнице Маунт-Мэссив происходит что-то страшное. Вооружившись камерой с режимом ночного видения, герой отправляется в лечебницу. Проникнув внутрь он видит трупы работников лечебницы, пациентов, а так же спецназа. Он оказывается заперт наедине с психами, некоторые из которых ведут себя агрессивно, а так же некой призрачной сущностью.',
+        poster: 'Images/.jpg'
+    },
+    {
+        id: '9',
+        category: 'Platformer',
+        title: 'The red strings club',
+        publishYear: '2018',
+        developer: 'Deconstructeam',
+        publisher: 'Devolver Digital',
+        description: 'Игра заканчивается падением Брейнданса из башни корпорации SuperContinent. Гланвый герой - бармен по имени Донован. Его друг - хакер по имени Брейнданс крадет у корпорации Supercontinent информацию по секретным проектам. Позже в бар Донована приходит сломанный андроид по имени Акара. Она помогает расшифровать данные. Оказывается, что корпорация создала 2 технологии. Первая технология - позволит контролировать эмоции, а можети разум людей, которые носят импланты корпорации. Таких людей не так много, примерно 20% населения. Но вторая технология Алгоритм Зеркальных Нейронов(АЗН), позволит контролировать людей и без имплантов. Трио главных героев пытается разоблачить корпорацию, показать людям правду. Однако правда ли это так плохо? Люди больше не будут испытывать сильную грусть или депрессию, соттветственно не будут совершать самоубийство, не будут чувствовать сильную злость, что не позволит им причить вред другим людям. Но стоит ли оно того, чтобы быть под контролем...',
+        poster: 'Images/.jpg'
+    },
+    {
+        id: '10',
         category: '',
         title: '',
         publishYear: '',
@@ -65,33 +112,7 @@ var games = [
         poster: 'Images/.jpg'
     },
     {
-        category: '',
-        title: '',
-        publishYear: '',
-        developer: '',
-        publisher: '',
-        description: '',
-        poster: 'Images/.jpg'
-    },
-    {
-        category: '',
-        title: '',
-        publishYear: '',
-        developer: '',
-        publisher: '',
-        description: '',
-        poster: 'Images/.jpg'
-    },
-    {
-        category: '',
-        title: '',
-        publishYear: '',
-        developer: '',
-        publisher: '',
-        description: '',
-        poster: 'Images/.jpg'
-    },
-    {
+        id: '11',
         category: '',
         title: '',
         publishYear: '',

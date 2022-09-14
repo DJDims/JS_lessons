@@ -56,7 +56,8 @@ function createGameCard(game) {
     cardPosterDiv.style.backgroundPosition = "center";
 
     cardMoreLink.innerHTML = "Подробнее...";
-    cardMoreLink.onclick = 'getGameInfo(' + game + ')';
+    cardMoreLink.id = game.id;
+    cardMoreLink.onclick = function(e) {getGameInfo(e.target.id)};
     cardMoreLink.href = "#";
 
     card.appendChild(cardPosterDiv);
@@ -67,6 +68,46 @@ function createGameCard(game) {
     return card;
 }
 
-function getGameInfo(game) {
-    
+function getGameInfo(gameId) {
+    $('#content').empty();
+    let game = games.find(a => a.id == gameId);
+
+    let card = document.createElement('div');
+    let cardHeader = document.createElement('h2');
+    let cardBody = document.createElement('p');
+    let cardPoster = document.createElement('img');
+
+    card.style.boxShadow = '10px 10px 10px 5px #000000';
+    card.style.width = 'auto';
+    card.style.display = 'flex';
+    card.style.flexDirection = 'row';
+    card.style.flexWrap = 'wrap';
+    card.style.padding = '10px';
+    card.style.marginBottom = '20px';
+    card.style.color = 'white';
+    card.style.fontFamily = 'Franklin Gothic Medium';
+
+    cardHeader.innerHTML = game.title + ' (' + game.publishYear + ')';
+    cardHeader.style.width = "100%";
+    cardHeader.style.height = "20px";
+    cardHeader.style.marginTop = "0px";
+    cardHeader.style.color = "#d65200";
+
+    let cardText = '';
+    cardText += 'Разработчик - ' + game.developer + '<br>';
+    cardText += 'Издатель - ' + game.publisher + '<br>';
+    cardText += 'Описание:\n' + game.description;
+    cardBody.innerHTML = cardText;
+    cardBody.style.width = '75%';
+
+    cardPoster.src = game.poster;
+    cardPoster.style.float = "left";
+    cardPoster.style.width = "20%";
+    cardPoster.style.marginRight = "20px";
+
+    card.appendChild(cardHeader);
+    card.appendChild(cardPoster);
+    card.appendChild(cardBody);
+
+    document.getElementById('content').appendChild(card);
 }
