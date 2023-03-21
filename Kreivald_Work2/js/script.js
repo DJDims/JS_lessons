@@ -7,16 +7,29 @@ $(document).ready(function () {
 });
 
 function getGamesListByCategory(element) {
-    let header = '<h2>Категория: ' + element + '</h2>';
+    let header = document.createElement('h2');
+    header.innerHTML = element;
+    header.style.color = "#d65200";
+    header.style.fontFamily = 'Franklin Gothic Medium';
+    
     let gamesList = games.filter(a => a.category == element);
-
+    
     if (gamesList.length > 0) {
         $('#content').empty();
         for (let i = 0; i < gamesList.length; i++) {
             document.getElementById("content").appendChild(createGameCard(gamesList[i]));
+            document.getElementById('content').style.flexDirection = "row";
         }
     } else {
-        $('#content').html(header + "Нет записей");
+        $('#content').empty();
+        let p = document.createElement('p');
+        p.innerHTML = 'Нет записей';
+        p.style.color = "#FFFFFF";
+        p.style.fontFamily = 'Franklin Gothic Medium';
+
+        document.getElementById('content').appendChild(header);
+        document.getElementById('content').appendChild(p);
+        document.getElementById('content').style.flexDirection = "column";
     }
 };
 
@@ -83,18 +96,16 @@ function getGameInfo(gameId) {
 
     card.style.boxShadow = '10px 10px 10px 5px #000000';
     card.style.width = '80%';
-    card.style.display = 'flex';
-    card.style.flexDirection = 'row';
-    card.style.flexWrap = 'wrap';
     card.style.padding = '10px';
     card.style.marginBottom = '20px';
     card.style.margin = '20px auto';
+    card.style.height = '620px';
     card.style.color = 'white';
     card.style.fontFamily = 'Franklin Gothic Medium';
 
     cardHeader.innerHTML = game.title + ' (' + game.publishYear + ')';
     cardHeader.style.width = "100%";
-    cardHeader.style.height = "20px";
+    cardHeader.style.height = "auto";
     cardHeader.style.marginTop = "0px";
     cardHeader.style.color = "#d65200";
 
@@ -103,18 +114,19 @@ function getGameInfo(gameId) {
     cardText += 'Издатель - ' + game.publisher + '<br>';
     cardText += 'Описание:\n' + game.description;
     cardBody.innerHTML = cardText;
-    cardBody.style.width = '70%';
     cardBody.style.textAlign = 'justify';
+    cardBody.style.fontSize = '25px';
 
     cardPosterLink.href = game.poster;
-    cardPosterLink.style.width = "28%";
+    cardPosterLink.style.height = "85%";
     cardPosterLink.style.marginRight = "20px";
+    cardPosterLink.style.float = "left";
     cardPosterLink.setAttribute('data-lightbox', 'image');
 
 
     cardPoster.src = game.poster;
     cardPoster.style.float = "left";
-    cardPoster.style.width = "100%";
+    cardPoster.style.height = "100%";
     cardPoster.style.marginRight = "20px";
 
     cardPosterLink.appendChild(cardPoster);
